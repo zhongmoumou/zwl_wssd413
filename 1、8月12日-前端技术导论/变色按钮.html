@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变色按钮</title>
+    <style>
+        html {
+            background-color: #00539F;
+        }   
+        body {
+            width: 600px;
+            /* 盒子整体居中显示，上下无外边距 */
+            margin: 100px auto 0 auto;
+            background-color: #FF9500;
+            /* 设置一个上右下左均20像素的内边距 */
+            padding: 20px 20px 20px 20px;
+            /* 设置一个黑色宽度为为5像素的实线边框 */
+            border: 5px solid black;
+            }
+        div {
+            /* 文本、按钮和图片居中 */
+            text-align: center;
+        }
+        h1 {
+            margin: 0;
+            padding: 10px 0; 
+            font-size: 40px;   
+            color: #00539F;
+            /* 设置文字阴影 */
+            text-shadow: 3px 3px 1px black;
+        }
+        .button {
+            font-size:40px;
+        }
+        img {
+            padding: 20px;
+            /* 设置图片居中 */
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 class="text">Hello World<h1>
+        <!-- 第一种按钮代码 -->
+        <button class="button" onclick="red()">变红色</button>
+        <button class="button" onclick="recover()">复原</button>
+        <!-- 第二种按钮代码
+        <input class="button" type="button" value="变红色" onclick="changered()">
+        <input class="button" type="button" value="复原" onclick="reserve()"> -->
+    </div>
+    <div><img src="images/盒模型.png" alt="盒模型" width="400px" ></div>
+    
+    
+    <!-- 引用JS代码，实现点击按钮变红色、复原效果 -->
+    <script type="text/javascript">
+        // 引用需要实现效果的代码
+    	var click = document.getElementsByClassName('text');
+    	// 输入此方法，可以使文字变红色
+        function red () {
+    		click[0].setAttribute('style','color:red')
+    	}
+        // 输入此方法，可以使文字颜色复原
+    	function recover () {
+    		click[0].removeAttribute('style')
+    	}
+    </script>
+</body>
+</html>
